@@ -1,0 +1,23 @@
+class Solution {
+public:
+    double myPow(double x, int n) {
+       long long N=n;
+        if(N<0){
+            x=1/x;
+            N=-N;
+        }
+        double ans =1;
+        while(N>0){
+            if(N%2==1){
+                ans*=x;
+            }
+            x*=x;
+            N/=2;
+        }
+        return ans;
+    }
+};
+
+// Synced seamlessly with LeetHub Pro
+// Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
+// Get it here: https://chromewebstore.google.com/detail/bcilpkkbokcopmabingnndookdogmbna
